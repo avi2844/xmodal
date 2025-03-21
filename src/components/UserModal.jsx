@@ -27,7 +27,7 @@ function UserModal({setOpen}) {
     }
   return (
     <div className="modal" onClick={() => setOpen(false)}>
-      <div className="modal-content">
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <h3>Fill Details</h3>
         <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username:</label>

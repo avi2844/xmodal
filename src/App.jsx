@@ -11,7 +11,7 @@ function App() {
     <>
       <h1>User Details Modal</h1>
       <button style={{background: 'lightblue'}} onClick={() => setOpen(true)}>Open Form</button>
-      <UserModal open={open} setOpen={setOpen}/>
+      {open ? <UserModal setOpen={setOpen}/> : null}
     </>
   )
 }

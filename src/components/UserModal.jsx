@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./UserModal.css";
 
-function UserModal({open, setOpen}) {
+function UserModal({setOpen}) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -26,7 +26,7 @@ function UserModal({open, setOpen}) {
         }
     }
   return (
-    <div className="modal" style={{display : open ? 'block' : 'none'}} onClick={() => setOpen(false)}>
+    <div className="modal" onClick={() => setOpen(false)}>
       <div className="modal-content">
         <h3>Fill Details</h3>
         <form onSubmit={handleSubmit}>
